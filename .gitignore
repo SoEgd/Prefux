@@ -8,3 +8,5 @@
 /.project
 /doc/
 /prefux.log
+
+.DS_Store
