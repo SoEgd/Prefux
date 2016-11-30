@@ -1,0 +1,30 @@
+Make sure that Java 8+ is installed on the system.
+
+
+In Eclipse:
+File -> Import... -> Gradle Project
+Set the Prefux folder as the "Project root directory" and click Finish.
+
+
+If there are errors related to jfxrt.jar:
+Try to remove the JRE System Library and then add it again.
+In Eclipse:
+Right-click on Prefux in the Package Explorer -> Properties
+Java Build Path -> Libraries -> remove JRE System Library.
+Add it again: Add Library... -> JRE System Library.
+
+If there are errors related to jena:
+Add the required libraries to the project.
+In Eclipse:
+Right-click on Prefux in the Package Explorer -> Properties
+Java Build Path -> Libraries -> Add JARs...
+Add all the jar-files under Prefux/lib/
+
+
+Change the ontology that is read by modifying the following line in GemMain or GemMain2:
+m.read("oaei2014_FMA_small_overlapping_nci.owl");
+
+One ontology is included: "oaei2014_FMA_small_overlapping_nci.owl"
+
+More ontologies can be downloaded from here:
+http://oaei.ontologymatching.org/2014/largebio/index.html
